@@ -1,7 +1,6 @@
 package com.jpahibernate.example.student_management_app.Model;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 @Entity // it represents that this class is entity or model class which is directly creating the database table ur schema
 @Table(name="student")//it will create a table inside database
