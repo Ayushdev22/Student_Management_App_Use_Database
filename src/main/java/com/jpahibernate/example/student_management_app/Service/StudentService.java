@@ -18,6 +18,7 @@ public class StudentService {
         studentRepository.save(student);
         return "Student add sucessfully";
     }
+
     public Student findByStudentId(int id){
        Optional<Student> studentOptional = studentRepository.findById(id);
         if(studentOptional.isPresent()){
@@ -26,14 +27,17 @@ public class StudentService {
            return null;
         }
     }
+
     public List<Student> findAllStudent(){
         List<Student> studentList = studentRepository.findAll();
         return studentList;
     }
+
     public String deleteStudentById(int id){
         studentRepository.deleteById(id);
         return +id+ "student is deleted";
     }
+
     public String updateStudentUsingPut(int id ,Student newStudentRequest){
         //find student by id
         //if student is present update it
@@ -48,6 +52,7 @@ public class StudentService {
             return "student not found to update";
         }
     }
+
     public String  updatestudentUsingPatch(int id ,String newEmail){
         Student existStudent = findByStudentId(id);
         if(existStudent != null){
