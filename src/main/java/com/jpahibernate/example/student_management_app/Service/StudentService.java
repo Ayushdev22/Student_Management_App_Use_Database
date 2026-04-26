@@ -16,7 +16,7 @@ public class StudentService {
 
     public String addStudent(Student student){
         studentRepository.save(student);
-        return "Student add sucessfully";
+        return "Student add ";
     }
 
     public Student findByStudentId(int id){
@@ -35,7 +35,7 @@ public class StudentService {
 
     public String deleteStudentById(int id){
         studentRepository.deleteById(id);
-        return +id+ "student is deleted";
+        return +id+ "student is deleted successfully";
     }
 
     public String updateStudentUsingPut(int id ,Student newStudentRequest){
@@ -49,7 +49,7 @@ public class StudentService {
             return "Student update successfully";
         }
         else{
-            return "student not found to update";
+            return "student not found for update";
         }
     }
 
@@ -61,7 +61,7 @@ public class StudentService {
             return"student update successfully";
         }
         else{
-            return "student not found";
+            return "student not found in databased";
         }
     }
     
